@@ -1,0 +1,15 @@
+.head{
+    font-family: lobster;
+}
+.mailbtn:hover{
+    color: white!important;
+    z-index: 2;
+    }
+    .mailbtn{
+        background-color: #ffc107!important;
+        color: black;
+        border: none;
+    }
+    .modal-title{
+        font-family: lobster;
+    }

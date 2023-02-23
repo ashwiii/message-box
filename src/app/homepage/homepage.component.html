@@ -1,0 +1,85 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <h2 class="head p-3">sent box</h2>
+        </div>
+        <div class="text-end col-6 p-3">
+            <button data-bs-toggle="modal" data-bs-target="#exampleModal1" class="btn btn-danger">clear all
+                messages</button>
+        </div>
+    </div>
+</div>
+<div class="container-fluid mt-4">
+    <div class="row p-2">
+        <div *ngFor="let item of todoitemsarray" class="col-sm-6 mb-3 mb-sm-0  mt-4">
+            <div class="card c1">
+                <div class="card-body">
+                    <h5 class="card-title">{{item.email}}</h5>
+                    <p class="card-text">{{item.message}}</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="position-fixed bottom-0 end-0 p-5">
+    <button type="button" class="btn btn-dark  mailbtn " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Compose mail
+    </button>
+</div>
+    <div class="modal fade   " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5  " id="staticBackdropLabel">Compose mail</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body ">
+                    <div class="form-floating mb-3">
+                        <input [(ngModel)]="itemarray" type="email" class="form-control" id="floatingInput"
+                            placeholder="name@example.com" required email>
+                        <label for="floatingInput">Receipiant@gmail.com</label>
+                    </div>
+                    
+
+                    <div>
+                        <textarea [(ngModel)]="todoitem2" class="form-control" name="" id="" cols="30"
+                            rows="10"></textarea>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button (click)="savemessage()" class="btn bg-dark text-warning" data-bs-dismiss="modal">save as
+                        draft</button>
+                    <button (click)="onitemadd()" class="btn bg-warning text-white btn-primary "
+                        data-bs-dismiss="modal">sent message</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Clear message</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                All your messages will be deleted.Please <span class="text-danger">refresh</span> the page after <span
+                    class="text-danger">confirm</span>
+            </div>
+            <div class="modal-footer">
+                <button (click)="clearsent()" class="btn btn-primary" data-bs-dismiss="modal">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
