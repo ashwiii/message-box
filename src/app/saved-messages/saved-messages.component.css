@@ -13,3 +13,7 @@
     .modal-title{
         font-family: lobster;
     }
+    .c1:hover{
+        background-color: #ffc107;
+        color: white;
+    }

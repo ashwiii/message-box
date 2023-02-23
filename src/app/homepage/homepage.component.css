@@ -16,3 +16,8 @@ z-index: 2;
 /* .c1{
     color: gray;
 } */
+
+.c1:hover{
+    background-color: #ffc107;
+    color: white;
+}
