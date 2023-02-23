@@ -38,18 +38,18 @@ export class SavedMessagesComponent implements OnInit {
   // }
 
   
-  // onitemadd(){
-  //   this.todoitemsarray.push({email:this.itemarray2,message:this.todoitem3})
-  //   localStorage.setItem('todoitems',JSON.stringify(this.todoitemsarray))
-  // }
+  onitemadd(){
+    this.todoitemsarray.push({email:this.itemarray4,message:this.todoitem4})
+    localStorage.setItem('todoitems',JSON.stringify(this.todoitemsarray))
+  }
 
   clearsent(){
     localStorage.removeItem('todoitems3')
   }
-  // savemessage(){
-  //   this.todoitemsarrayay.push({email:this.itemarray4,message:this.todoitem4})
-  //   localStorage.setItem('todoitems3',JSON.stringify(this.todoitemsarrayay))
-  // }
+  savemessage(){
+    this.todoitemsarrayay.push({email:this.itemarray4,message:this.todoitem4})
+    localStorage.setItem('todoitems3',JSON.stringify(this.todoitemsarrayay))
+  }
 
 }
 
